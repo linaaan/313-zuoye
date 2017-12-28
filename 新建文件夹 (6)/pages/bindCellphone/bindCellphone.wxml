@@ -1,0 +1,20 @@
+<view class="page bindPhone-wrap" id="bindPhonePage" data-router="bindPhonePage">
+  <view class="verify-wrap" hidden="{{ hideVerifyPhone }}">
+    <view class="verify-row">
+      <label class="item-name"></label><input placeholder="" bindinput="inputOldCode" /><label class="get-code-btn" bindtap="sendCodeToOldPhone" >{{ oldCodeStatus }}</label>
+    </view>
+    <view class="option-btn next-step" bindtap="nextStep"></view>
+  </view>
+  <view class="bind-new-tel-wrap" hidden="{{ hideBindNewPhone }}">
+    <view class="verify-row" style="border-bottom: 1px solid #e5e5e5;">
+      <label class="item-name"></label><input class="code-tel" bindinput="inputPhone" placeholder=""/>
+    </view>
+    <view class="verify-row">
+      <label class="item-name"></label><input bindinput="inputNewCode" placeholder=""/><label class="get-code-btn" bindtap="sendCodeToNewPhone">{{ newCodeStatus }}</label>
+    </view>
+    <label class="option-btn bind-new-tel-btn {{ !newPhone || !newCode ? 'disabled' : '' }}" bindtap="bindNewPhone"></label>
+    <button class="option-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+    <view class="support-tip"></view>
+  </view>
+</view>
+

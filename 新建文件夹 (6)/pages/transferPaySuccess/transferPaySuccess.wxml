@@ -1,0 +1,9 @@
+<view>
+  <view><icon type="success" size="80"/></view>
+  <view class="paySuccess-tip"></view>
+  <view class="paySuccess-detail">¥ <text class="pay-count">{{ totalPayment }}</text></view>
+  <view>
+    <button type="primary" bindtap="transferSuccessCallback"></button>
+    <button type="default" bindtap="goToOrderDetail"></button>
+  </view>
+</view>
